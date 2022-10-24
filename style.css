@@ -59,3 +59,18 @@ body {
 input {
     display: none;
 }
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #749F82;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border-color: transparent;
+    width: 100px;
+    font-family: 'Fredoka One', cursive;
+}
