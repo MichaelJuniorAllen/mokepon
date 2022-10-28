@@ -74,3 +74,20 @@ input {
     width: 100px;
     font-family: 'Fredoka One', cursive;
 }
+
+#mensajes {
+    width: 280px;
+    background-color: #749F82;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #749F82;
+    font-family: 'Fredoka One', cursive;
+}

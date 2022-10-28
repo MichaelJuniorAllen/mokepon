@@ -96,7 +96,7 @@ function combate() {
     if(ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")
     } else if(ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
-        crearMensaje("GANASTE")
+        crearMensaje(" GANASTE ")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
@@ -108,7 +108,7 @@ function combate() {
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
-        crearMensaje("PERDISTE")
+        crearMensaje(" PERDISTE ")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }
@@ -125,21 +125,27 @@ function revisarvidas() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById('mensajes')
-    
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', las mascota del enemigo atacó con ' + ataqueEnemigo + '- ' + resultado
+    let sectionMensajes = document.getElementById('resultado')
+    let ataqueDelJugador = document.getElementById('ataques-del-jugador')
+    let taquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
-    sectionMensajes.appendChild(parrafo)
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
+
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+    ataqueDelJugador.appendChild(nuevoAtaqueDelJugador)
+    taquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+
 }
 
 function crearMensajeFinal(resultadofinal) {
-    let sectionMensajes = document.getElementById('mensajes')
+    let sectionMensajes = document.getElementById('resultado')
     
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = resultadofinal
-
-    sectionMensajes.appendChild(parrafo)
+    sectionMensajes.innerHTML = resultadofinal
+    
     let botonFuego=document.getElementById('boton-fuego')
     botonFuego.disabled=true
     let botonAgua=document.getElementById('boton-agua')
