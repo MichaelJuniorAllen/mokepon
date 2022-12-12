@@ -80,7 +80,7 @@ input:checked + label {
 }
 
 #mensajes {
-    width: 280px;
+    width: 200px;
     background-color: #749F82;
     padding: 20px;
     margin-top: 20px;
@@ -92,8 +92,9 @@ input:checked + label {
 
 #boton-reiniciar {
     border: none;
-    color: #749F82;
+    color: #000000;
     font-family: 'Fredoka One', cursive;
+    background-color: darkgrey;
 }
 
 .ataques {
